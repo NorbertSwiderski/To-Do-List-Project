@@ -12,19 +12,28 @@
 </head>
 
 <body>
-    <div class="jumbotron jumbotron-fluid text-light bg-dark">
-        <div class="container">
-            <h1 class="display-4 text-center">Lista zadań</h1>
+    <div class="app_container">
+        <div class="jumbotron jumbotron-fluid text-light bg-dark">
+            <div class="jumbotron_header">
+                <h1 class="display-4 text-center">Lista zadań</h1>
+            </div>
+        </div><br>
+        <div class="input-group mb-3">
+            <input type="text" class="form-control bg-dark text-light" placeholder="Wpisz zadanie"
+                aria-label="Recipient's username" aria-describedby="button-addon2">
+            <div class="input-group-append">
+                <button class="btn bg-dark text-light" type="button" id="button-addon2">Dodaj zadanie</button>
+            </div>
         </div>
-    </div><br>
-    <div class="input-group mb-3">
-        <input type="text" class="form-control" placeholder="Wpisz zadanie" aria-label="Recipient's username"
-            aria-describedby="button-addon2">
-        <div class="input-group-append bg-dark text-light">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2">Dodaj zadanie</button>
+        <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+            <div class="card-header">Do zrobienia</div>
+            <div class="card-body">
+                <h5 class="card-title">Pierwszy wpis</h5>
+                <button type="button" class="btn btn-success">Zrobione!</button>
+                <button type="button" class="btn btn-danger float-right">Usuń</button>
+            </div>
         </div>
     </div>
-
     <script src="script.js"></script>
 </body>
 
