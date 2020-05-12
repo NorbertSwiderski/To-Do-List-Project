@@ -1,0 +1,26 @@
+html{
+    height: 100vh;
+}
+.app_container{
+    height: 100vh;
+    background-color: #CDD7D6;
+}
+.jumbotron{
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0;
+}
+.todo_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 5px 25px;
+}
+.card-title{
+    text-align: center;
+    margin-bottom: 20px;
+}
+.card-body{
+    padding: 15px;
+}
