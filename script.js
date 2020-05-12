@@ -5,17 +5,36 @@ function addTask() {
     <div class="card-header">Do zrobienia:</div>
     <div class="card-body">
         <h5 class="card-title">${inputText}</h5>
-        <button type="button" class="btn btn-success" onclick="toggleTask()">Zrobione!</button>
-        <button type="button" class="btn btn-danger float-right" onclick="deleteTask()">Usuń</button>
-    </div>`;
-    if(inputText){
+        <button type="button" class="btn btn-success button-js" onclick="toggleTask(this)">Zrobione!</button>
+        <button type="button" class="btn btn-danger float-right" onclick="deleteTask(this)">Usuń</button>
+    </div>
+    </div>`
+
+    if (inputText) {
         todoContainer.insertAdjacentHTML('beforeend', newCard);
     }
-    else{
+    else {
         alert("Podaj nazwę zadania!");
     }
 }
-function deleteTask(){
-    
+function deleteTask(item) {
+    item.parentElement.parentElement.remove();
+}
+function toggleTask(item){
+    let card = item.parentElement.parentElement;
+    card.classList.toggle("bg-dark");
+    card.classList.toggle("bg-success");
+    let todoTextEl = item.previousElementSibling;
+    if (item.innerText =="Zrobione!"){
+        item.innerText = "Cofnij wykonanie!";
+        card.firstElementChild.innerText = "Zrobione!";
+
+        todoTextEl.innerHTML = `<del>${todoTextEl.innerText}</del>`;
+    }
+    else {
+        item.innerText = "Zrobione!";
+        card.firstElementChild.innerText = "Do zrobienia:"
+        todoTextEl.innerHTML = todoTextEl.innerText;
+    }
 }
 
