@@ -12,6 +12,7 @@ function addTask() {
 
     if (inputText) {
         todoContainer.insertAdjacentHTML('beforeend', newCard);
+        document.querySelector('.input-js').value = "";
     }
     else {
         alert("Podaj nazwę zadania!");
