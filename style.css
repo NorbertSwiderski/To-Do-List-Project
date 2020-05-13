@@ -1,9 +1,13 @@
-html{
-    height: 100vh;
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .app_container{
     height: 100vh;
     background-color: #CDD7D6;
+    width: 100vh;
+    width: 100%;
 }
 .jumbotron{
     height: 20vh;
@@ -16,6 +20,7 @@ html{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     padding: 5px 25px;
+    padding-left: 0;
 }
 .card-title{
     text-align: center;
@@ -23,4 +28,10 @@ html{
 }
 .card-body{
     padding: 15px;
+}
+.select_button{
+    margin-bottom: 13px;
+}
+.select_container{
+    padding: 5px 25px;
 }
